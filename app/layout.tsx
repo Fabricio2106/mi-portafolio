@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mi-portafolio-psi-gold.vercel.app"),
   title: "Fabricio Orihuela | Desarrollador Full Stack",
   description:
     "Portafolio de Fabricio Orihuela Figueroa, desarrollador full stack. Proyectos con React, Node.js, Java y Spring Boot.",
