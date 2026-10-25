@@ -7,6 +7,7 @@ const categorias = [
       "JavaScript",
       "TypeScript",
       "React",
+      "Next.js",
       "Angular",
       "Bootstrap",
       "Tailwind CSS",
