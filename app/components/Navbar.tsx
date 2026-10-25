@@ -1,5 +1,6 @@
 const enlaces = [
   { texto: "Inicio", href: "#inicio" },
+  { texto: "Sobre mí", href: "#sobre-mi" },
   { texto: "Proyectos", href: "#proyectos" },
   { texto: "Habilidades", href: "#habilidades" },
   { texto: "Contacto", href: "#contacto" },
