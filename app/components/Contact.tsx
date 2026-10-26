@@ -1,6 +1,7 @@
 import { Mail } from "lucide-react";
 import { WHATSAPP_URL } from "../data/contacto";
 import { GithubIcon, LinkedinIcon, WhatsappIcon } from "./Iconos";
+import Titulo from "./Titulo";
 
 const contactos = [
   {
@@ -28,7 +29,7 @@ const contactos = [
 export default function Contact() {
   return (
     <section id="contacto" className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="aparecer text-2xl font-semibold sm:text-3xl">Contacto</h2>
+      <Titulo>Contacto</Titulo>
       <ul className="aparecer mt-8 flex flex-col gap-3">
         {contactos.map(({ texto, href, Icono }) => (
           <li key={href}>
