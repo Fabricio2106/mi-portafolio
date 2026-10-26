@@ -30,12 +30,12 @@ const proyectos: Proyecto[] = [
 export default function Projects() {
   return (
     <section id="proyectos" className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="text-2xl font-semibold sm:text-3xl">Proyectos</h2>
+      <h2 className="aparecer text-2xl font-semibold sm:text-3xl">Proyectos</h2>
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         {proyectos.map((proyecto) => (
           <article
             key={proyecto.titulo}
-            className="flex flex-col rounded-2xl border border-white/10 bg-oscuro p-6"
+            className="aparecer flex flex-col rounded-2xl border border-white/10 bg-oscuro p-6 transition duration-200 hover:border-acento/50 motion-safe:hover:-translate-y-1"
           >
             <h3 className="text-lg font-semibold">{proyecto.titulo}</h3>
             <p className="mt-3 flex-1 text-sm leading-6 text-white/85">

@@ -28,8 +28,8 @@ const contactos = [
 export default function Contact() {
   return (
     <section id="contacto" className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="text-2xl font-semibold sm:text-3xl">Contacto</h2>
-      <ul className="mt-8 flex flex-col gap-3">
+      <h2 className="aparecer text-2xl font-semibold sm:text-3xl">Contacto</h2>
+      <ul className="aparecer mt-8 flex flex-col gap-3">
         {contactos.map(({ texto, href, Icono }) => (
           <li key={href}>
             <a
