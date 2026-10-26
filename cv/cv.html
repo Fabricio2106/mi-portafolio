@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>CV - Fabricio Orihuela Figueroa</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --acento: #d92d2d; --texto: #1c1917; --suave: #57534e; --linea: #e7e5e4; }
+  body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    font-size: 10pt;
+    line-height: 1.45;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .hoja { width: 210mm; height: 297mm; display: flex; flex-direction: column; }
+  header {
+    background: #0a0a0a;
+    color: #fafafa;
+    padding: 14mm 15mm 10mm;
+    border-bottom: 2.5mm solid var(--acento);
+  }
+  header h1 { font-size: 25pt; line-height: 1.1; letter-spacing: 0.2pt; }
+  header .rol {
+    margin-top: 2mm;
+    font-size: 11pt;
+    letter-spacing: 2.4pt;
+    text-transform: uppercase;
+    color: #ff6b6b;
+  }
+  header ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5mm 6mm;
+    margin-top: 5mm;
+    font-size: 9pt;
+    color: #d6d3d1;
+  }
+  .cuerpo { display: flex; flex: 1; }
+  main { flex: 1; padding: 9mm 9mm 9mm 15mm; }
+  aside { width: 66mm; padding: 9mm 15mm 9mm 5mm; border-left: 0.3mm solid var(--linea); }
+  section + section { margin-top: 6.5mm; }
+  h2 {
+    font-size: 9.5pt;
+    letter-spacing: 1.8pt;
+    text-transform: uppercase;
+    color: var(--acento);
+    padding-bottom: 1.2mm;
+    border-bottom: 0.3mm solid var(--linea);
+    margin-bottom: 3mm;
+  }
+  .item + .item { margin-top: 4mm; }
+  .item .titulo { font-weight: 700; font-size: 10.5pt; }
+  .item .lugar { color: var(--suave); }
+  .item .fecha { color: var(--suave); font-size: 9pt; }
+  .item p { margin-top: 1.2mm; }
+  .item .tec { margin-top: 1mm; font-size: 8.8pt; color: var(--suave); }
+  .perfil { color: #292524; }
+  .grupo + .grupo { margin-top: 3.5mm; }
+  .grupo h3 { font-size: 9pt; font-weight: 700; margin-bottom: 1mm; }
+  .grupo p { color: var(--suave); font-size: 9pt; }
+  aside ul { list-style: none; }
+  aside li { color: var(--suave); font-size: 9pt; padding: 0.4mm 0; }
+  aside li::before { content: "▪"; color: var(--acento); margin-right: 2mm; }
+</style>
+</head>
+<body>
+<div class="hoja">
+  <header>
+    <h1>Fabricio Orihuela Figueroa</h1>
+    <div class="rol">Desarrollador Full Stack</div>
+    <ul>
+      <li>+51 954 063 407</li>
+      <li>figueroafabricio14@gmail.com</li>
+      <li>linkedin.com/in/fabricio-figueroa-184985397</li>
+      <li>github.com/Fabricio2106</li>
+      <li>fabricio-orihuela.vercel.app</li>
+    </ul>
+  </header>
+
+  <div class="cuerpo">
+    <main>
+      <section>
+        <h2>Perfil</h2>
+        <p class="perfil">Desarrollador full stack de 22 años, estudiante de Desarrollo de Sistemas Frontend y Backend en IDAT. Trabajo en Hannah Lab, donde construyo soluciones de software para clientes reales. Me gusta aprender construyendo y resolver problemas con código.</p>
+      </section>
+
+      <section>
+        <h2>Experiencia</h2>
+        <div class="item">
+          <div class="titulo">Desarrollador Full Stack</div>
+          <div class="lugar">Hannah Lab</div>
+          <div class="fecha">Octubre 2026 – Actualidad</div>
+          <p>Desarrollo de soluciones de software para clientes reales, tanto en frontend como en backend.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Proyectos</h2>
+        <div class="item">
+          <div class="titulo">Sistema de Multicines Iquitos</div>
+          <p>Plataforma para comprar entradas de cine en línea con un mapa interactivo de butacas que muestra la disponibilidad en tiempo real. Procesa pagos solo con tarjeta.</p>
+          <div class="tec">React · Vite · JavaScript · CSS3</div>
+          <div class="tec">github.com/Fabricio2106/Sistema-de-Cine</div>
+        </div>
+        <div class="item">
+          <div class="titulo">Tienda en línea Seblaza</div>
+          <p>Tienda en línea con catálogo de productos, carrito de compras, pago y seguimiento de pedidos. Incluye registro e inicio de sesión de clientes, reseñas y un panel de administración.</p>
+          <div class="tec">React · Vite · Supabase · Bootstrap · EmailJS</div>
+          <div class="tec">github.com/Fabricio2106/ESFRT2-Seblaza · esfrt-2-seblaza.vercel.app</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Educación</h2>
+        <div class="item">
+          <div class="titulo">Desarrollo de Sistemas Frontend y Backend</div>
+          <div class="lugar">IDAT</div>
+          <div class="fecha">2024 – 2027 · Cursando el 7.º ciclo</div>
+        </div>
+        <div class="item">
+          <div class="titulo">Educación secundaria</div>
+          <div class="lugar">Melitón Carvajal</div>
+          <div class="fecha">2017 – 2021</div>
+        </div>
+      </section>
+    </main>
+
+    <aside>
+      <section>
+        <h2>Habilidades</h2>
+        <div class="grupo"><h3>Frontend</h3><p>HTML5, CSS3, JavaScript, TypeScript, React, Next.js, Angular, Bootstrap, Tailwind CSS</p></div>
+        <div class="grupo"><h3>Backend</h3><p>Node.js, Java, Spring Boot, NestJS, Python, REST APIs</p></div>
+        <div class="grupo"><h3>Bases de datos</h3><p>MySQL, PostgreSQL</p></div>
+        <div class="grupo"><h3>Herramientas</h3><p>Git, GitHub, Visual Studio Code, Postman</p></div>
+      </section>
+
+      <section>
+        <h2>Habilidades blandas</h2>
+        <ul>
+          <li>Trabajo en equipo</li>
+          <li>Adaptabilidad</li>
+          <li>Resolución de problemas</li>
+          <li>Aprendizaje rápido</li>
+          <li>Proactividad</li>
+          <li>Comunicación efectiva</li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+</div>
+</body>
+</html>
