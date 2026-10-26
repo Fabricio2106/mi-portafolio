@@ -14,6 +14,39 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* El menú fijo no debe tapar el título de la sección a la que se salta. */
+section[id] {
+  scroll-margin-top: 6.5rem;
+}
+
+@media (min-width: 40rem) {
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+}
+
+/* Aparición suave al entrar en pantalla. Solo en navegadores que lo soportan. */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .aparecer {
+      animation: aparecer linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 45%;
+    }
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

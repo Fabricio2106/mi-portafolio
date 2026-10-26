@@ -30,10 +30,12 @@ const categorias = [
 export default function Skills() {
   return (
     <section id="habilidades" className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="text-2xl font-semibold sm:text-3xl">Habilidades</h2>
+      <h2 className="aparecer text-2xl font-semibold sm:text-3xl">
+        Habilidades
+      </h2>
       <div className="mt-8 grid gap-8 sm:grid-cols-2">
         {categorias.map((categoria) => (
-          <div key={categoria.titulo}>
+          <div key={categoria.titulo} className="aparecer">
             <h3 className="text-sm uppercase tracking-widest text-acento">
               {categoria.titulo}
             </h3>
@@ -41,7 +43,7 @@ export default function Skills() {
               {categoria.items.map((item) => (
                 <li
                   key={item}
-                  className="rounded-full border border-white/10 bg-oscuro px-4 py-2 text-sm"
+                  className="rounded-full border border-white/10 bg-oscuro px-4 py-2 text-sm transition-colors duration-200 hover:border-acento/60 hover:text-acento"
                 >
                   {item}
                 </li>
