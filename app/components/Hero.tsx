@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -34,6 +34,14 @@ export default function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 font-medium transition-colors hover:border-acento hover:text-acento"
           >
             Ver proyectos
+          </a>
+          <a
+            href="/CV-Fabricio-Orihuela.pdf"
+            download
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 font-medium transition-colors hover:border-acento hover:text-acento"
+          >
+            <Download className="size-4" />
+            Descargar CV
           </a>
         </div>
       </div>
