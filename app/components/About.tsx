@@ -1,4 +1,5 @@
 import { Briefcase, GraduationCap } from "lucide-react";
+import Titulo from "./Titulo";
 
 const bloques = [
   {
@@ -20,7 +21,7 @@ const bloques = [
 export default function About() {
   return (
     <section id="sobre-mi" className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="aparecer text-2xl font-semibold sm:text-3xl">Sobre mí</h2>
+      <Titulo>Sobre mí</Titulo>
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         {bloques.map(({ titulo, Icono, cargo, lugar, detalle }) => (
           <article

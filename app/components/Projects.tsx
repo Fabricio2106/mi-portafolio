@@ -1,5 +1,6 @@
 import { ExternalLink, Globe } from "lucide-react";
 import { GithubIcon } from "./Iconos";
+import Titulo from "./Titulo";
 
 type Proyecto = {
   titulo: string;
@@ -30,7 +31,7 @@ const proyectos: Proyecto[] = [
 export default function Projects() {
   return (
     <section id="proyectos" className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="aparecer text-2xl font-semibold sm:text-3xl">Proyectos</h2>
+      <Titulo>Proyectos</Titulo>
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         {proyectos.map((proyecto) => (
           <article
