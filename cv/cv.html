@@ -15,11 +15,11 @@
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-  .hoja { width: 210mm; height: 297mm; display: flex; flex-direction: column; }
+  .hoja { width: 210mm; height: 296mm; display: flex; flex-direction: column; overflow: hidden; }
   header {
     background: #0a0a0a;
     color: #fafafa;
-    padding: 14mm 15mm 10mm;
+    padding: 11mm 15mm 8mm;
     border-bottom: 2.5mm solid var(--acento);
   }
   header h1 { font-size: 25pt; line-height: 1.1; letter-spacing: 0.2pt; }
@@ -32,17 +32,33 @@
   }
   header ul {
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5mm 6mm;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3mm 6mm;
     margin-top: 5mm;
-    font-size: 9pt;
-    color: #d6d3d1;
+    padding-top: 4mm;
+    border-top: 0.3mm solid rgba(255, 255, 255, 0.18);
+  }
+  header li { min-width: 0; }
+  header li.doble { grid-column: span 2; }
+  header li span {
+    display: block;
+    font-size: 7pt;
+    letter-spacing: 1.6pt;
+    text-transform: uppercase;
+    color: #ff6b6b;
+  }
+  header li b {
+    display: block;
+    margin-top: 0.6mm;
+    font-weight: 400;
+    font-size: 9.5pt;
+    color: #f5f5f4;
   }
   .cuerpo { display: flex; flex: 1; }
-  main { flex: 1; padding: 9mm 9mm 9mm 15mm; }
-  aside { width: 66mm; padding: 9mm 15mm 9mm 5mm; border-left: 0.3mm solid var(--linea); }
-  section + section { margin-top: 6.5mm; }
+  main { flex: 1; padding: 7mm 9mm 6mm 15mm; }
+  aside { width: 66mm; padding: 7mm 15mm 6mm 5mm; border-left: 0.3mm solid var(--linea); }
+  section + section { margin-top: 5.5mm; }
   h2 {
     font-size: 9.5pt;
     letter-spacing: 1.8pt;
@@ -73,11 +89,11 @@
     <h1>Fabricio Orihuela Figueroa</h1>
     <div class="rol">Desarrollador Full Stack</div>
     <ul>
-      <li>+51 954 063 407</li>
-      <li>figueroafabricio14@gmail.com</li>
-      <li>linkedin.com/in/fabricio-figueroa-184985397</li>
-      <li>github.com/Fabricio2106</li>
-      <li>fabricio-orihuela.vercel.app</li>
+      <li><span>Teléfono</span><b>+51 954 063 407</b></li>
+      <li><span>Correo</span><b>figueroafabricio14@gmail.com</b></li>
+      <li><span>Portafolio</span><b>fabricio-orihuela.vercel.app</b></li>
+      <li class="doble"><span>LinkedIn</span><b>linkedin.com/in/fabricio-figueroa-184985397</b></li>
+      <li><span>GitHub</span><b>github.com/Fabricio2106</b></li>
     </ul>
   </header>
 
