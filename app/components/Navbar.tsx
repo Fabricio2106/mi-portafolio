@@ -48,7 +48,9 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-10 border-b border-white/10 bg-oscuro/95 backdrop-blur">
-      <nav className="mx-auto flex max-w-5xl flex-col items-center gap-2 px-6 py-3 sm:flex-row sm:justify-between sm:py-4">
+      <nav
+        aria-label="Principal"
+        className="mx-auto flex max-w-5xl flex-col items-center gap-2 px-6 py-3 sm:flex-row sm:justify-between sm:py-4">
         <a href="#inicio" className="font-semibold text-acento">
           Fabricio Orihuela
         </a>
@@ -57,7 +59,7 @@ export default function Navbar() {
             <li key={enlace.id}>
               <a
                 href={`#${enlace.id}`}
-                aria-current={activo === enlace.id ? "true" : undefined}
+                aria-current={activo === enlace.id ? "location" : undefined}
                 className={`transition-colors hover:text-acento ${
                   activo === enlace.id ? "text-acento" : ""
                 }`}
