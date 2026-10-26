@@ -1,4 +1,5 @@
 import { ExternalLink, Globe } from "lucide-react";
+import Image from "next/image";
 import { GithubIcon } from "./Iconos";
 import Titulo from "./Titulo";
 
@@ -8,6 +9,7 @@ type Proyecto = {
   tecnologias: string[];
   repo: string;
   demo?: string;
+  imagen: { src: string; alt: string };
 };
 
 const proyectos: Proyecto[] = [
@@ -18,6 +20,10 @@ const proyectos: Proyecto[] = [
     tecnologias: ["React", "Vite", "JavaScript", "CSS3"],
     repo: "https://github.com/Fabricio2106/Sistema-de-Cine",
     demo: "https://multicines-iquitos.vercel.app",
+    imagen: {
+      src: "/proyectos/multicines.png",
+      alt: "Captura de pantalla de la página de inicio de Multicines Iquitos, con la cartelera en un carrusel",
+    },
   },
   {
     titulo: "Tienda en línea Seblaza",
@@ -26,6 +32,10 @@ const proyectos: Proyecto[] = [
     tecnologias: ["React", "Vite", "Supabase", "Bootstrap", "EmailJS"],
     repo: "https://github.com/Fabricio2106/ESFRT2-Seblaza",
     demo: "https://seblaza.vercel.app",
+    imagen: {
+      src: "/proyectos/seblaza.png",
+      alt: "Captura de pantalla de la página de inicio de la tienda Seblaza, con el catálogo de productos",
+    },
   },
 ];
 
@@ -37,45 +47,55 @@ export default function Projects() {
         {proyectos.map((proyecto) => (
           <article
             key={proyecto.titulo}
-            className="aparecer flex flex-col rounded-2xl border border-white/10 bg-oscuro p-6 transition duration-200 hover:border-acento/50 motion-safe:hover:-translate-y-1"
+            className="aparecer flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-oscuro transition duration-200 hover:border-acento/50 motion-safe:hover:-translate-y-1"
           >
-            <h3 className="text-lg font-semibold">{proyecto.titulo}</h3>
-            <p className="mt-3 flex-1 text-sm leading-6 text-white/85">
-              {proyecto.descripcion}
-            </p>
-            <ul className="mt-4 flex flex-wrap gap-2">
-              {proyecto.tecnologias.map((tecnologia) => (
-                <li
-                  key={tecnologia}
-                  className="rounded-full bg-white/10 px-3 py-1 text-xs"
-                >
-                  {tecnologia}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium">
-              <a
-                href={proyecto.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-acento underline-offset-4 hover:underline"
-              >
-                <GithubIcon className="size-4" />
-                Ver en GitHub
-                <ExternalLink className="size-3.5" />
-              </a>
-              {proyecto.demo && (
+            <Image
+              src={proyecto.imagen.src}
+              alt={proyecto.imagen.alt}
+              width={1280}
+              height={720}
+              sizes="(min-width: 768px) 512px, 100vw"
+              className="aspect-[2/1] w-full border-b border-white/10 object-cover object-top"
+            />
+            <div className="flex flex-1 flex-col p-6">
+              <h3 className="text-lg font-semibold">{proyecto.titulo}</h3>
+              <p className="mt-3 flex-1 text-sm leading-6 text-white/85">
+                {proyecto.descripcion}
+              </p>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {proyecto.tecnologias.map((tecnologia) => (
+                  <li
+                    key={tecnologia}
+                    className="rounded-full bg-white/10 px-3 py-1 text-xs"
+                  >
+                    {tecnologia}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium">
                 <a
-                  href={proyecto.demo}
+                  href={proyecto.repo}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-acento underline-offset-4 hover:underline"
                 >
-                  <Globe className="size-4" />
-                  Ver demo
+                  <GithubIcon className="size-4" />
+                  Ver en GitHub
                   <ExternalLink className="size-3.5" />
                 </a>
-              )}
+                {proyecto.demo && (
+                  <a
+                    href={proyecto.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-acento underline-offset-4 hover:underline"
+                  >
+                    <Globe className="size-4" />
+                    Ver demo
+                    <ExternalLink className="size-3.5" />
+                  </a>
+                )}
+              </div>
             </div>
           </article>
         ))}
