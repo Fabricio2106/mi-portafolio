@@ -17,6 +17,7 @@ const proyectos: Proyecto[] = [
       "Plataforma para comprar entradas de cine en línea con un mapa interactivo de butacas que muestra la disponibilidad en tiempo real. Procesa pagos solo con tarjeta.",
     tecnologias: ["React", "Vite", "JavaScript", "CSS3"],
     repo: "https://github.com/Fabricio2106/Sistema-de-Cine",
+    demo: "https://multicines-iquitos-beta.vercel.app",
   },
   {
     titulo: "Tienda en línea Seblaza",
@@ -24,7 +25,7 @@ const proyectos: Proyecto[] = [
       "Tienda en línea con catálogo de productos, carrito de compras, pago y seguimiento de pedidos. Incluye registro e inicio de sesión de clientes, reseñas y un panel de administración.",
     tecnologias: ["React", "Vite", "Supabase", "Bootstrap", "EmailJS"],
     repo: "https://github.com/Fabricio2106/ESFRT2-Seblaza",
-    demo: "https://esfrt-2-seblaza.vercel.app",
+    demo: "https://seblaza.vercel.app",
   },
 ];
 
