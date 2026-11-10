@@ -19,8 +19,18 @@
   header {
     background: #0a0a0a;
     color: #fafafa;
-    padding: 11mm 15mm 8mm;
+    padding: 9mm 15mm 7mm;
     border-bottom: 2.5mm solid var(--acento);
+  }
+  header .cabecera { display: flex; align-items: center; justify-content: space-between; gap: 8mm; }
+  header .foto {
+    width: 27mm;
+    height: 27mm;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 0.8mm solid var(--acento);
   }
   header h1 { font-size: 25pt; line-height: 1.1; letter-spacing: 0.2pt; }
   header .rol {
@@ -86,8 +96,13 @@
 <body>
 <div class="hoja">
   <header>
-    <h1>Fabricio Orihuela Figueroa</h1>
-    <div class="rol">Desarrollador Full Stack</div>
+    <div class="cabecera">
+      <div>
+        <h1>Fabricio Orihuela Figueroa</h1>
+        <div class="rol">Desarrollador Full Stack</div>
+      </div>
+      <img class="foto" src="../public/foto-perfil.jpg" alt="Fabricio Orihuela Figueroa">
+    </div>
     <ul>
       <li><span>Teléfono</span><b>+51 954 063 407</b></li>
       <li><span>Correo</span><b>figueroafabricio14@gmail.com</b></li>
