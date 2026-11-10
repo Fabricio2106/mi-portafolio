@@ -9,7 +9,7 @@ export default function NotFound() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_30%,rgba(239,68,68,0.22),transparent_70%)]"
       />
       <div className="relative py-24 text-center">
-        <p className="text-sm uppercase tracking-widest text-acento">
+        <p className="text-sm tracking-widest text-acento uppercase">
           Error 404
         </p>
         <h1 className="mt-4 text-5xl font-bold sm:text-7xl">

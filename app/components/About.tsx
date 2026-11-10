@@ -28,7 +28,7 @@ export default function About() {
             key={titulo}
             className="aparecer rounded-2xl border border-white/10 bg-oscuro p-6 transition duration-200 hover:border-acento/50 motion-safe:hover:-translate-y-1"
           >
-            <h3 className="flex items-center gap-2 text-sm uppercase tracking-widest text-acento">
+            <h3 className="flex items-center gap-2 text-sm tracking-widest text-acento uppercase">
               <Icono className="size-4" />
               {titulo}
             </h3>

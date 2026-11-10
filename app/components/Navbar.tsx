@@ -50,7 +50,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-10 border-b border-white/10 bg-oscuro/95 backdrop-blur">
       <nav
         aria-label="Principal"
-        className="mx-auto flex max-w-5xl flex-col items-center gap-2 px-6 py-3 sm:flex-row sm:justify-between sm:py-4">
+        className="mx-auto flex max-w-5xl flex-col items-center gap-2 px-6 py-3 sm:flex-row sm:justify-between sm:py-4"
+      >
         <a href="#inicio" className="font-semibold text-acento">
           Fabricio Orihuela
         </a>

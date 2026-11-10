@@ -34,12 +34,14 @@ npm run dev
 
 Luego abre [http://localhost:3000](http://localhost:3000) en el navegador.
 
-| Comando | Qué hace |
-| --- | --- |
-| `npm run dev` | Inicia el servidor de desarrollo |
-| `npm run build` | Compila el sitio para producción |
-| `npm start` | Sirve la versión compilada |
-| `npm run lint` | Revisa el código con ESLint |
+| Comando                | Qué hace                                |
+| ---------------------- | --------------------------------------- |
+| `npm run dev`          | Inicia el servidor de desarrollo        |
+| `npm run build`        | Compila el sitio para producción        |
+| `npm start`            | Sirve la versión compilada              |
+| `npm run lint`         | Revisa el código con ESLint             |
+| `npm run format`       | Da formato al código con Prettier       |
+| `npm run format:check` | Comprueba el formato sin modificar nada |
 
 ## Estructura
 

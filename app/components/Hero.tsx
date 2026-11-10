@@ -8,10 +8,10 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_0%,rgba(239,68,68,0.28),transparent_70%)]"
       />
       <div className="relative mx-auto max-w-5xl px-6 py-24 sm:py-36">
-        <p className="text-sm uppercase tracking-widest text-acento">
+        <p className="text-sm tracking-widest text-acento uppercase">
           Desarrollador full stack
         </p>
-        <h1 className="mt-4 text-5xl font-bold leading-tight sm:text-7xl">
+        <h1 className="mt-4 text-5xl leading-tight font-bold sm:text-7xl">
           Fabricio Orihuela Figueroa
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-8 text-white/90">
