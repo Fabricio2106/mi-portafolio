@@ -9,20 +9,20 @@ type Proyecto = {
   tecnologias: string[];
   repo: string;
   demo?: string;
-  imagen: { src: string; alt: string };
+  imagen?: { src: string; alt: string };
 };
 
 const proyectos: Proyecto[] = [
   {
-    titulo: "Sistema de Multicines Iquitos",
+    titulo: "Sistema de Cinerama",
     descripcion:
-      "Plataforma para comprar entradas de cine en línea con un mapa interactivo de butacas que muestra la disponibilidad en tiempo real. Procesa pagos solo con tarjeta.",
-    tecnologias: ["React", "Vite", "JavaScript", "CSS3"],
-    repo: "https://github.com/Fabricio2106/Sistema-de-Cine",
-    demo: "https://multicines-iquitos.vercel.app",
+      "Sitio web de cartelera y venta de entradas de cine. Cada compra se registra con sus asientos y el precio lo calcula el servidor. La autenticación, la base de datos Postgres y las reglas de seguridad corren en Supabase.",
+    tecnologias: ["React", "Vite", "Tailwind CSS", "Supabase", "PostgreSQL"],
+    repo: "https://github.com/Fabricio2106/sistema-cines",
+    demo: "https://cinerama-pacifico.vercel.app",
     imagen: {
-      src: "/proyectos/multicines.png",
-      alt: "Captura de pantalla de la página de inicio de Multicines Iquitos, con la cartelera en un carrusel",
+      src: "/proyectos/cinerama.png",
+      alt: "Captura de pantalla de la página de inicio de Cinerama, con la cartelera en un carrusel de estrenos",
     },
   },
   {
@@ -49,14 +49,16 @@ export default function Projects() {
             key={proyecto.titulo}
             className="aparecer flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-oscuro transition duration-200 hover:border-acento/50 motion-safe:hover:-translate-y-1"
           >
-            <Image
-              src={proyecto.imagen.src}
-              alt={proyecto.imagen.alt}
-              width={1280}
-              height={720}
-              sizes="(min-width: 768px) 512px, 100vw"
-              className="aspect-[2/1] w-full border-b border-white/10 object-cover object-top"
-            />
+            {proyecto.imagen && (
+              <Image
+                src={proyecto.imagen.src}
+                alt={proyecto.imagen.alt}
+                width={1280}
+                height={720}
+                sizes="(min-width: 768px) 512px, 100vw"
+                className="aspect-[2/1] w-full border-b border-white/10 object-cover object-top"
+              />
+            )}
             <div className="flex flex-1 flex-col p-6">
               <h3 className="text-lg font-semibold">{proyecto.titulo}</h3>
               <p className="mt-3 flex-1 text-sm leading-6 text-white/85">
