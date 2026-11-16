@@ -7,6 +7,7 @@ const enlaces = [
   { texto: "Sobre mí", id: "sobre-mi" },
   { texto: "Proyectos", id: "proyectos" },
   { texto: "Habilidades", id: "habilidades" },
+  { texto: "Certificados", id: "certificados" },
   { texto: "Contacto", id: "contacto" },
 ];
 
