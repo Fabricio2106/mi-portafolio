@@ -10,9 +10,10 @@ const contactos = [
     Icono: WhatsappIcon,
   },
   {
-    texto: "figueroafabricio14@gmail.com",
-    href: "mailto:figueroafabricio14@gmail.com",
+    texto: "fabricio.orihuela@hannahlab.com",
+    href: "mailto:fabricio.orihuela@hannahlab.com",
     Icono: Mail,
+    nota: "Correo de empresa",
   },
   {
     texto: "LinkedIn",
@@ -31,8 +32,8 @@ export default function Contact() {
     <section id="contacto" className="mx-auto max-w-5xl px-6 py-16">
       <Titulo>Contacto</Titulo>
       <ul className="aparecer mt-8 flex flex-col gap-3">
-        {contactos.map(({ texto, href, Icono }) => (
-          <li key={href}>
+        {contactos.map(({ texto, href, Icono, nota }) => (
+          <li key={href} className="flex flex-wrap items-center gap-x-3">
             <a
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
@@ -42,6 +43,7 @@ export default function Contact() {
               <Icono className="size-5" />
               {texto}
             </a>
+            {nota && <span className="text-sm text-white/60">{nota}</span>}
           </li>
         ))}
       </ul>
