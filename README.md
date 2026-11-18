@@ -56,6 +56,6 @@ public/         Archivos públicos, como el CV en PDF
 
 ## Contacto
 
-- Correo: [figueroafabricio14@gmail.com](mailto:figueroafabricio14@gmail.com)
+- Correo de empresa: [fabricio.orihuela@hannahlab.com](mailto:fabricio.orihuela@hannahlab.com)
 - LinkedIn: [fabricio-figueroa-184985397](https://www.linkedin.com/in/fabricio-figueroa-184985397)
 - GitHub: [Fabricio2106](https://github.com/Fabricio2106)
